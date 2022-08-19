@@ -6,7 +6,7 @@
       Here is some of my work that i've done in various programming languages
     </p>
     <!-- portfolios -->
-    <div class="grid grid-cols-3 gap-8 mt-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-24 md:mt-12">
       <!-- portfolio-item -->
       <port-item :imagen="'https://i.imgur.com/fejjLsZ.jpg'" :link-g-h="'https://github.com/Terrakill5/prueba_frontend'"></port-item>
     </div>

@@ -1,9 +1,9 @@
 <template>
     <div class="text-center">
-      <h2 class="relative uppercase text-6xl font-bold">
-        {{contactProps.frontTitle1}} <span class="text-secundario">{{contactProps.frontTitle2}}</span
+      <h2 class="relative uppercase text-3xl md:text-5xl lg:text-6xl font-bold">
+        <span :class="{'text-gris2': light.isLight}">{{contactProps.frontTitle1}}</span>  <span class="text-4xl md:text-5xl lg:text-6xl" :class="{'text-secundario': !light.isLight, 'text-secundario1': light.isLight}">{{contactProps.frontTitle2}}</span
         ><span
-          class="absolute -top-2/4 left-28% atras text-gris5 transition-all delay-500 ease-in-out -translate-x-1/2 -translate-y-1/2 font-extrabold text-8xl"
+          class="absolute -top-2/4 left-28% atras text-gris5 transition-all delay-500 ease-in-out -translate-x-1/2 -translate-y-1/2 font-extrabold text-5xl md:text-6xl lg:text-8xl"
           >{{contactProps.backTitle}}</span
         >
         </h2>
@@ -12,6 +12,8 @@
 
 <script setup>
 import { defineProps } from "vue";
+import { useLightStore } from "../store/light";
+const light = useLightStore();
 
 const contactProps = defineProps({
   frontTitle1: {

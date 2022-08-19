@@ -3,17 +3,19 @@
   <div class="flex items-center justify-between">
     <!-- icon -->
     <div class="icon grid ">
-      <i class="fa-solid flex items-center text-xl" :class="{'fa-location-dot': location, 'fa-envelope': envelope, 'fa-user-graduate': graduate, 'fa-globe': globe, 'fa-mobile': mobile}"></i>
-      <span>{{contactProps.title}}</span>
+      <i  class="fa-solid flex items-center text-xl" :class="{'fa-location-dot': location, 'fa-envelope': envelope, 'fa-user-graduate': graduate, 'fa-globe': globe, 'fa-mobile': mobile, 'text-gris4':light.isLight}"></i>
+      <span :class="{'text-gris4': light.isLight}">{{contactProps.title}}</span>
     </div>
     <p class="my-2 mx-0 p-0">
-      <span> : {{contactProps.description}}</span>
+      <span :class="{'text-gris4': light.isLight}"> : {{contactProps.description}}</span>
     </p>
   </div>
 </template>
 
 <script setup>
 import { defineProps } from "vue";
+import { useLightStore } from "../store/light";
+const light = useLightStore();
 const location = contactProps.icon === 'location';
 const envelope = contactProps.icon === 'envelope';
 const graduate = contactProps.icon === 'graduate';

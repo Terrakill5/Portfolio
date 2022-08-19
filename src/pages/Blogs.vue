@@ -3,17 +3,17 @@
     <div class="blogs-content">
           <titulo :front-title1="'My'" :front-title2="'Blogs'" :back-title="'My Blogs'"></titulo>
       <!-- blogs -->
-      <div class="grid grid-cols-3 gap-8 mt-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-24 md:mt-12">
       <!--   blog -->
-        <div class="blog relative bg-gris5 rounded-md shadow-especial2 transition-all duration-500 ease-in-out">
+        <div :class="{'bg-gris5':!light.isLight, 'bg-gris':light.isLight}" class="blog relative rounded-md shadow-especial2 transition-all duration-500 ease-in-out">
           <img src="../img/blog1.jpg" alt="" class="w-full h-72 object-cover rounded-t-md transition-all duration-500 ease-in-out"/>
           <!-- blog-text -->
-          <div class="-mt-1 p-5 rounded-t-lg border-solid border-secundario">
-            <h4>
+          <div :class="{'border-secundario':!light.isLight, 'border-secundario1':light.isLight}" class="-mt-1 p-5 rounded-t-lg border-solid">
+            <h4 :class="{'text-gris4':light.isLight}">
               How to Create Your Own Website
             </h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, maiores eaque sit voluptate molestias impedit, tenetur quas, nisi eligendi deleniti mollitia assumenda accusamus eius? Error, non. Repellendus magni iusto quaerat.
+            <p :class="{'text-gris4':light.isLight}">
+              I don't have one... but hey, looks cool here :V
             </p>
           </div>
         </div>
@@ -24,6 +24,8 @@
 
 <script setup>
 import Titulo from "../components/Titulo.vue";
+import { useLightStore } from "../store/light";
+const light = useLightStore();
 </script>
 
 <style scoped>

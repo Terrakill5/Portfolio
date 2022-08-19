@@ -4,7 +4,7 @@
           <img :src=portfolioProps.imagen alt="" class="w-full h-72 object-cover rounded-2xl"/>
         </div>
         <!-- hover-item -->
-        <div class="w-full h-full bg-secundario absolute left-0 top-0 rounded-2xl flex justify-center items-center flex-col opacity-0 scale-0 transition-all duration-500 ease-in-out hover:opacity-100 hover:scale-100">
+        <div :class="{'bg-secundario': !light.isLight, 'bg-secundario1':light.isLight}" class="w-full h-full absolute left-0 top-0 rounded-2xl flex justify-center items-center flex-col opacity-0 scale-0 transition-all duration-500 ease-in-out hover:opacity-100 hover:scale-100">
           <h3 class="text-2xl text-white mb-6">Project Source</h3>
           <!-- icons -->
           <div class="flex justify-center items-center">
@@ -24,6 +24,8 @@
 
 <script setup>
 import { defineProps } from "vue";
+import { useLightStore } from "../store/light";
+const light = useLightStore();
 
 const portfolioProps = defineProps({
   imagen: {

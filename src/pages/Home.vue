@@ -1,12 +1,15 @@
 <template>
   <div class="sec2 about">
-    <header class="section sec1 header active">
-      <div class="grid grid-cols-2 h-full">
+    <!-- header -->
+    <header class="section sec1 active">
+      <div class="grid grid-cols-1 pb-24 md:pb-0 md:grid-cols-2 min-h-screen">
         <!-- header-content -->
         <div class="flex items-center relative">
           <!-- left-header -->
           <div
-            class="transition-all duration-500 ease-in-out h-full w-8/12 bg-secundario absolute left-0 top-0 h-shape"
+            class="transition-all duration-500 ease-in-out h-full w-8/12 absolute left-0 top-0 h-shape"
+            :class="{'bg-secundario': !light.isLight, 'bg-secundario1': light.isLight}"
+
           ></div>
           <!-- h-shape -->
           <div
@@ -19,14 +22,13 @@
             />
           </div>
         </div>
-        <div class="flex flex-col justify-center pr-72">
+        <div class="row-end-1 md:row-auto w-11/12 my-0 mx-auto md:m-auto md:w-full flex flex-col justify-center md:pr-72 p-8">
           <!-- right-header -->
-          <h1 class="text-5xl font-bold">
+          <h1 class="text-4xl md:text-5xl font-bold " :class="{'text-gris4': light.isLight}">
             <!-- name -->
-            Hi, <span class="text-secundario">I'm Jose Briceño</span>
-            A Frotend Web Developer
-          </h1>
-          <p class="my-6 mx-0 leading-8">
+            Hi,</h1> <h1 class="text-4xl md:text-5xl font-bold"><span :class="{ 'text-secundario': !light.isLight, 'text-secundario1': light.isLight }">I'm Jose Briceño</span></h1>
+            <h1 class="text-4xl md:text-5xl font-bold" :class="{'text-gris4': light.isLight}">A Frontend Web Developer</h1>
+          <p class="my-6 mx-0 leading-8" :class="{'text-gris4': light.isLight}">
             I'm a Web Developer, I love to create beautiful and functional
             websites
           </p>
@@ -40,6 +42,8 @@
 
 <script setup>
 import boton from "../components/Boton.vue";
+import { useLightStore } from "../store/light";
+const light = useLightStore();
 </script>
 
 <style scoped>
@@ -66,5 +70,11 @@ img:hover {
   height: 100%;
   background-color: #27ae60;
   transform: translateX(0);
+}
+
+@media screen and (max-width: 768px) {
+  .h-shape {
+    display: none;
+  }
 }
 </style>

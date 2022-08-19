@@ -4,12 +4,12 @@
     <titulo :front-title1="'My'" :front-title2="'Contact'" :back-title="'My Contact'"></titulo>
     </div>
     <!-- contact-content-con -->
-    <div class="flex pt-14">
+    <div class="flex flex-col md:flex-row pt-14">
       <!-- left-contact -->
       <div class="left-contact">
-        <h4 class="mt-4 text-3xl uppercase">Contact me here</h4>
-        <p class="my-4 mx-0 leading-8">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti, ullam, fugiat placeat possimus suscipi numquam nemo ab? Iusto, nemo! Asperiores, non.
+        <h4 :class="{'text-gris4': light.isLight}" class="mt-4 text-3xl uppercase">Contact me here</h4>
+        <p :class="{'text-gris3': light.isLight}" class="my-4 mx-0 leading-8">
+          <!-- Por si hace falta texto poner aca -->
         </p>
         <!-- contact-info -->
         <div class="">
@@ -21,13 +21,13 @@
           <div class="contact-icons">
             <!-- contact-icon -->
             <div class="flex mt-8">
-              <a href="https://www.facebook.com/Terrakill" target="_blank" class="flex items-center text-white bg-gris5 cursor-pointer justify-center w-12 h-12 rounded-1/2 my-0 mx-2 hover:bg-secundario transition-all duration-500 ease-in-out group">
+              <a href="https://www.facebook.com/Terrakill" target="_blank" class="flex items-center text-white bg-gris5 cursor-pointer justify-center w-12 h-12 rounded-1/2 my-0 mx-2 transition-all duration-500 ease-in-out group" :class="{'hover:bg-secundario': !light.isLight, 'hover:bg-secundario1': light.isLight}">
                 <i class="fa-brands fa-facebook flex items-center justify-center text-xl group-hover:text-primario"></i>
               </a>
-              <a href="https://github.com/Terrakill5/" target="_blank" class="flex items-center text-white bg-gris5 cursor-pointer justify-center w-12 h-12 rounded-1/2 my-0 mx-2 hover:bg-secundario transition-all duration-500 ease-in-out group">
+              <a href="https://github.com/Terrakill5/" target="_blank" class="flex items-center text-white bg-gris5 cursor-pointer justify-center w-12 h-12 rounded-1/2 my-0 mx-2 transition-all duration-500 ease-in-out group" :class="{'hover:bg-secundario': !light.isLight, 'hover:bg-secundario1': light.isLight}">
                 <i class="fa-brands fa-github flex items-center justify-center text-xl group-hover:text-primario"></i>
               </a>
-              <a href="https://www.linkedin.com/in/jose-briceno5" target="_blank" class="flex items-center text-white bg-gris5 cursor-pointer justify-center w-12 h-12 rounded-1/2 my-0 mx-2 hover:bg-secundario transition-all duration-500 ease-in-out group" >
+              <a href="https://www.linkedin.com/in/jose-briceno5" target="_blank" class="flex items-center text-white bg-gris5 cursor-pointer justify-center w-12 h-12 rounded-1/2 my-0 mx-2 transition-all duration-500 ease-in-out group" :class="{'hover:bg-secundario': !light.isLight, 'hover:bg-secundario1': light.isLight}">
                 <i class="fa-brands fa-linkedin flex items-center justify-center text-xl group-hover:text-primario"></i>
               </a>
             </div>
@@ -35,12 +35,12 @@
         </div>
       </div>
       <!-- right-contact -->
-      <div class="right-contact ml-12">
+      <div class="right-contact ml-0 mt-10 lg:mt-0 lg:ml-12">
         <form action="" class="contact-form">
           <!-- input-control -->
-          <div class="input-control m-6 flex">
+          <div class="input-control m-6 flex flex-col lg:flex-row">
             <input class="rounded-30 py-3 px-4 outline-none border-none bg-gris5 w-full text-white resize-none" type="text" required placeholder="YOUR NAME">
-            <input class="ml-6 rounded-30 py-3 px-4 outline-none border-none bg-gris5 w-full text-white resize-none" type="email" required placeholder="YOUR EMAIL" />
+            <input class="ml-0 mt-6 lg:mt-0 lg:ml-6 rounded-30 py-3 px-4 outline-none border-none bg-gris5 w-full text-white resize-none" type="email" required placeholder="YOUR EMAIL" />
           </div>
           <div class="input-control m-6">
             <input class="rounded-30 py-3 px-4 outline-none border-none bg-gris5 w-full text-white resize-none" type="text" required placeholder="ENTER SUBJECT" />
@@ -63,6 +63,8 @@
   import Titulo from "../components/Titulo.vue";
   import Boton from "../components/Boton.vue";
   import ContactItem from "../components/ContactItem.vue";
+  import { useLightStore } from "../store/light";
+const light = useLightStore();
 </script>
 
 <style scoped>
