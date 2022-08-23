@@ -42,4 +42,8 @@ const contactProps = defineProps({
 .icon {
   grid-template-columns: 40px 1fr;
 }
+
+@media screen and (max-width: 472px) {
+  
+}
 </style>

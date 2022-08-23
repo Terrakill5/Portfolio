@@ -97,12 +97,12 @@
       </h4>
       <!-- progress-bars -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <progress-bar :titulo="'html'" :text="60"></progress-bar>
-        <progress-bar :titulo="'CSS'"  :text="60"></progress-bar>
-        <progress-bar :titulo="'JavaScript'" :text="60"></progress-bar>
-        <progress-bar :titulo="'Vue'" :text="80"></progress-bar>
-        <progress-bar :titulo="'TailwindCSS'" :text="40"></progress-bar>
-        <progress-bar :titulo="'TypeScript'" :text="40"></progress-bar>
+        <progress-bar :titulo="'html'" :text="'Junior'"></progress-bar>
+        <progress-bar :titulo="'CSS'"  :text="'Junior'"></progress-bar>
+        <progress-bar :titulo="'JavaScript'" :text="'Junior'"></progress-bar>
+        <progress-bar :titulo="'Vue'" :text="'Junior'"></progress-bar>
+        <progress-bar :titulo="'TailwindCSS'" :text="'Junior'"></progress-bar>
+        <progress-bar :titulo="'TypeScript'" :text="'Junior'"></progress-bar>
       </div>
     </div>
   </section>
