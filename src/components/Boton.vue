@@ -2,7 +2,7 @@
 <template>
   <div class="flex self-start">
     <a
-      href=""
+      href="https://drive.google.com/file/d/1KCxjfhAlYOJEIVFcBqA_6Xf62avbQK4T/view?usp=sharing"
       class="rounded-30 font-semibold relative border border-solid border-secundario flex self-start items-center overflow-hidden"
       :class="{'antesLight': light.isLight, 'antes': !light.isLight}"
     >

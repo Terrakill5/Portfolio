@@ -15,7 +15,7 @@
       <router-link
       to="/"
         @click="clickPestana(0)"
-        class="p-4 cursor-pointer w-[55px] h-[55px] rounded-1/2 flex justify-center items-center my-4 mx-1 md:mx-0 md:my-3 shadow-especial dark:bg-secundario1"
+        class="p-4 cursor-pointer w-14  h-14 rounded-1/2 flex justify-center items-center my-4 mx-1 md:mx-0 md:my-3 shadow-especial dark:bg-secundario1"
         :class="{ 'bg-secundario': activo[0], 'bg-gris4': !activo[0], 'bg-secundario1': activo[0] && light.isLight }"
       >
         <i
@@ -27,7 +27,7 @@
       <router-link
       to="/about"
         @click="clickPestana(1) "
-        class="p-4 cursor-pointer w-[55px] h-[55px] rounded-1/2 flex justify-center items-center my-4 mx-1 md:mx-0 md:my-3 shadow-especial dark:bg-secundario1"
+        class="p-4 cursor-pointer w-14  h-14 rounded-1/2 flex justify-center items-center my-4 mx-1 md:mx-0 md:my-3 shadow-especial dark:bg-secundario1"
         :class="{ 'bg-secundario': activo[1], 'bg-gris4': !activo[1], 'bg-secundario1': activo[1] && light.isLight }"
       >
         <i class="fa-solid fa-user text-xl pointer-events-none" :class="{ 'text-white': activo[1],'text-gris2' : !activo[1] }"></i>
@@ -36,7 +36,7 @@
       <router-link
       to="/portfolio"
         @click="clickPestana(2)"
-        class="p-4 cursor-pointer w-[55px] h-[55px] rounded-1/2 flex justify-center items-center my-4 mx-1 md:mx-0 md:my-3 shadow-especial dark:bg-secundario1"
+        class="p-4 cursor-pointer w-14  h-14 rounded-1/2 flex justify-center items-center my-4 mx-1 md:mx-0 md:my-3 shadow-especial dark:bg-secundario1"
         :class="{ 'bg-secundario': activo[2], 'bg-gris4': !activo[2], 'bg-secundario1': activo[2] && light.isLight}"
       >
         <i
@@ -47,7 +47,7 @@
       <router-link
       to="/blogs"
         @click="clickPestana(3)"
-        class="p-4 cursor-pointer w-[55px] h-[55px] rounded-1/2 flex justify-center items-center my-4 mx-1 md:mx-0 md:my-3 shadow-especial dark:bg-secundario1"
+        class="p-4 cursor-pointer w-14  h-14 rounded-1/2 flex justify-center items-center my-4 mx-1 md:mx-0 md:my-3 shadow-especial dark:bg-secundario1"
         :class="{ 'bg-secundario': activo[3], 'bg-gris4': !activo[3], 'bg-secundario1': activo[3] && light.isLight}"
       >
         <i
@@ -58,7 +58,7 @@
       <router-link
       to="/contact"
         @click="clickPestana(4)"
-        class="p-4 cursor-pointer w-[55px] h-[55px] rounded-1/2 flex justify-center items-center my-4 mx-1 md:mx-0 md:my-3 shadow-especial dark:bg-secundario1"
+        class="p-4 cursor-pointer w-14  h-14 rounded-1/2 flex justify-center items-center my-4 mx-1 md:mx-0 md:my-3 shadow-especial dark:bg-secundario1"
         :class="{ 'bg-secundario': activo[4], 'bg-gris4': !activo[4], 'bg-secundario1': activo[4] && light.isLight}"
       >
         <i

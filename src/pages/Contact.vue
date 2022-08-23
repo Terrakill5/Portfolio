@@ -75,4 +75,5 @@ const light = useLightStore();
 .right-contact {
   flex: 3;
 } 
+
 </style>

@@ -8,7 +8,7 @@
     <!-- portfolios -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-24 md:mt-12">
       <!-- portfolio-item -->
-      <port-item :imagen="'https://i.imgur.com/fejjLsZ.jpg'" :link-g-h="'https://github.com/Terrakill5/prueba_frontend'"></port-item>
+      <port-item :imagen="'https://i.imgur.com/fejjLsZ.jpg'" :link-g-h="'https://github.com/Terrakill5/prueba_frontend'" :link-b-h="'https://beamish-bubblegum-226193.netlify.app/'"></port-item>
     </div>
   </section>
 </template>
