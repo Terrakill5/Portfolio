@@ -16,7 +16,7 @@
             class="rounded-xl z-20 h-90 ml-16 bg-black transition-all duration-500 ease-in-out"
           >
             <img
-              src="../img/hero.png"
+              src="../img/hero1.jpg"
               alt="Mi foto"
               class="w-ful h-full object-cover transition-all duration-500 ease-in-out"
             />

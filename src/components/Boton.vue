@@ -3,8 +3,8 @@
   <div class="flex self-start">
     <a
       href="https://drive.google.com/file/d/1KCxjfhAlYOJEIVFcBqA_6Xf62avbQK4T/view?usp=sharing"
-      class="rounded-30 font-semibold relative border border-solid border-secundario flex self-start items-center overflow-hidden"
-      :class="{'antesLight': light.isLight, 'antes': !light.isLight}"
+      class="rounded-30 font-semibold relative border border-solid flex self-start items-center overflow-hidden"
+      :class="{'antesLight': light.isLight,'border-secundario1': light.isLight, 'antes': !light.isLight, 'border-secundario': !light.isLight,}"
     >
       <span class="py-0 px-8" :class="{'text-gris4': light.isLight}">Download CV</span>
       <span

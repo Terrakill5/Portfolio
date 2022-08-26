@@ -8,7 +8,11 @@
         <!-- left-about -->
         <h4 class="text-3xl uppercase font-bold" :class="{'text-gris4':light.isLight}">Information About me</h4>
         <p class="leading-8 pl-0 py-4 md:p-4" :class="{'text-gris1': !light.isLight, 'text-gris4':light.isLight}">
-          Motivado a aprender todo sobre mi carrera, para mi primer trabajo mi prioridad es aprender, más alla de cuanto pueda ganar. Alegre de trabajar en desarrollo y poder poner en pantalla mi creatividad. Responsable, trabajador, y motivado a cumplir expectativas.
+          Bachellor in Computer Science in Proccess, Proficient in Frontend Developement using Vanilla JavaScript, VueJS and React. Open to Work using my skills and open to learn any other technology. <br>
+
+I'm a Self-taught person, responsable, open minded, i get fun solving problems and i want to be the best of myself. i want to be better every day, as a person and as a professional. <br>
+
+I am currently working at IDforIdeas, there are juniors from various branches such as backend, designers, etc. We work on a project where we set out to realize an idea, like a pizza shop and as a group we use our skills to design, develop and test it to deliver a real life product. We're using Vanilla CSS, ReactJS as front. I'm the shift Product Owner/Scrum Master. 
         </p>
         <boton></boton>
         <!-- CV Download -->
@@ -86,7 +90,7 @@
       <!-- Timeline/ Jobs -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pb-24 md:pb-12">
     <!-- timeline-item -->
-        <timeline :start="2022" :ended="'Present'" :title="'Frontend Web Developer'" :company="'ID for ideas'" :text="'Parte del equipo de Frontend usando HTML, CSS, ReactJS. A cargo de unir al equipo 381 y servir de mediador entre ellos para poder llegar acuerdos sobre el proyecto e impulsar el mismo para su realizacion y produccion.'"></timeline>
+        <timeline :start="2022" :ended="'Present'" :title="'Frontend Web Developer'" :company="'ID for ideas'" :text="'Part of the Frontend team using HTML, CSS, ReactJS. In charge of uniting the 381 team and serving as a mediator between them to be able to reach agreements on the project and promote it for its realization and production.'"></timeline>
       </div>
       <!-- stat-title -->
       <h4
