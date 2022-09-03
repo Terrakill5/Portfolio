@@ -26,11 +26,10 @@
           <!-- right-header -->
           <h1 class="text-4xl md:text-5xl font-bold " :class="{'text-gris4': light.isLight}">
             <!-- name -->
-            Hi,</h1> <h1 class="text-4xl md:text-5xl font-bold"><span :class="{ 'text-secundario': !light.isLight, 'text-secundario1': light.isLight }">I'm Jose Briceño</span></h1>
-            <h1 class="text-4xl md:text-5xl font-bold" :class="{'text-gris4': light.isLight}">A Frontend Web Developer</h1>
+            {{$t('h1.saludo')}},</h1> <h1 class="text-4xl md:text-5xl font-bold"><span :class="{ 'text-secundario': !light.isLight, 'text-secundario1': light.isLight }">{{$t('h1.nombre')}}</span></h1>
+            <h1 class="text-4xl md:text-5xl font-bold" :class="{'text-gris4': light.isLight}">{{$t('h1.carrera')}}</h1>
           <p class="my-6 mx-0 leading-8" :class="{'text-gris4': light.isLight}">
-            I'm a Web Developer, I love to create beautiful and functional
-            websites
+            {{$t('p.presentacion')}}
           </p>
           <boton></boton>
         </div>

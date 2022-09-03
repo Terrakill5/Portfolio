@@ -1,7 +1,7 @@
 <template>
   <section class="sec4 blogs">
     <div class="blogs-content">
-          <titulo :front-title1="'My'" :front-title2="'Blogs'" :back-title="'My Blogs'"></titulo>
+          <titulo :front-title1="$t('my')" :front-title2="'Blogs'" :back-title="'My Blogs'"></titulo>
       <!-- blogs -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-24 md:mt-12">
       <!--   blog -->
@@ -10,10 +10,10 @@
           <!-- blog-text -->
           <div :class="{'border-secundario':!light.isLight, 'border-secundario1':light.isLight}" class="-mt-1 p-5 rounded-t-lg border-solid">
             <h4 :class="{'text-gris4':light.isLight}">
-              How to Create Your Own Website
+              {{$t('h4.blogsDescription1')}}
             </h4>
             <p :class="{'text-gris4':light.isLight}">
-              I don't have one... but hey, looks cool here :V
+             {{$t('h4.blogsDescription2')}}
             </p>
           </div>
         </div>

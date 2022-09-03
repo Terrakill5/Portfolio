@@ -1,23 +1,23 @@
 <template>
 <section class="section sec5 contact">
     <div class="contact-container">
-    <titulo :front-title1="'My'" :front-title2="'Contact'" :back-title="'My Contact'"></titulo>
+    <titulo :front-title1="$t('my')" :front-title2="$t('contact')" :back-title="'My Contact'"></titulo>
     </div>
     <!-- contact-content-con -->
     <div class="flex flex-col md:flex-row pt-14">
       <!-- left-contact -->
       <div class="left-contact">
-        <h4 :class="{'text-gris4': light.isLight}" class="mt-4 text-3xl uppercase">Contact me here</h4>
+        <h4 :class="{'text-gris4': light.isLight}" class="mt-4 text-3xl uppercase">{{$t('h4.contactDesc')}}</h4>
         <p :class="{'text-gris3': light.isLight}" class="my-4 mx-0 leading-8">
           <!-- Por si hace falta texto poner aca -->
         </p>
         <!-- contact-info -->
         <div class="">
-          <contact-item :title="'Location'" :description="'Tumbes, Peru'" :icon="'location'"></contact-item>
-          <contact-item :title="'Email'" :description="'josealbertino4@gmail.com'" :icon="'envelope'"></contact-item>
-          <contact-item :title="'Education'" :description="'Valencia, Venezuela'" :icon="'graduate'"></contact-item>
-          <contact-item :title="'Mobile Number'" :description="'+51935175495'" :icon="'mobile'"></contact-item>
-          <contact-item :title="'Languages'" :description="'Native Spanish, Mid English'" :icon="'globe'"></contact-item>
+          <contact-item :title="$t('location')" :description="'Tumbes, Peru'" :icon="'location'"></contact-item>
+          <contact-item :title="$t('email')" :description="'josealbertino4@gmail.com'" :icon="'envelope'"></contact-item>
+          <contact-item :title="$t('education')" :description="'Valencia, Venezuela'" :icon="'graduate'"></contact-item>
+          <contact-item :title="$t('mobileN')" :description="'+51935175495'" :icon="'mobile'"></contact-item>
+          <contact-item :title="$t('languages')" :description="$t('languagesDesc')" :icon="'globe'"></contact-item>
           <div class="contact-icons">
             <!-- contact-icon -->
             <div class="flex mt-8">
@@ -39,14 +39,14 @@
         <form action="" class="contact-form">
           <!-- input-control -->
           <div class="input-control m-6 flex flex-col lg:flex-row">
-            <input class="rounded-30 py-3 px-4 outline-none border-none bg-gris5 w-full text-white resize-none" type="text" required placeholder="YOUR NAME">
-            <input class="ml-0 mt-6 lg:mt-0 lg:ml-6 rounded-30 py-3 px-4 outline-none border-none bg-gris5 w-full text-white resize-none" type="email" required placeholder="YOUR EMAIL" />
+            <input class="rounded-30 py-3 px-4 outline-none border-none bg-gris5 w-full text-white resize-none" type="text" required :placeholder="$t('yourName')">
+            <input class="ml-0 mt-6 lg:mt-0 lg:ml-6 rounded-30 py-3 px-4 outline-none border-none bg-gris5 w-full text-white resize-none" type="email" required :placeholder="$t('yourEmail')" />
           </div>
           <div class="input-control m-6">
-            <input class="rounded-30 py-3 px-4 outline-none border-none bg-gris5 w-full text-white resize-none" type="text" required placeholder="ENTER SUBJECT" />
+            <input class="rounded-30 py-3 px-4 outline-none border-none bg-gris5 w-full text-white resize-none" type="text" required :placeholder="$t('enterSubject')" />
           </div>
           <div class="input-control m-6">
-            <textarea class="rounded-30 py-3 px-4 outline-none border-none bg-gris5 w-full text-white resize-none" name="" id="" cols="15" rows="8" placeholder="Message Here..." />
+            <textarea class="rounded-30 py-3 px-4 outline-none border-none bg-gris5 w-full text-white resize-none" name="" id="" cols="15" rows="8" :placeholder="$t('messageHere')" />
           </div>
           <!-- submit-btn -->
           <div class="flex justify-start">

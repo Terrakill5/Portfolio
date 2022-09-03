@@ -1,9 +1,9 @@
 <template>
   <section class="section sec3 portfolio">
-        <titulo :front-title1="'My'" :front-title2="'Portfolio'" :back-title="'My Work'"></titulo>
+        <titulo :front-title1="$t('my')" :front-title2="$t('portfolio')" :back-title="'My Work'"></titulo>
     <!-- port-text -->
     <p class="py-8 px-0 text-center"> 
-      Here is some of my work that i've done in various programming languages
+      {{$t('p.portfolioDescription')}}
     </p>
     <!-- portfolios -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-24 md:mt-12">

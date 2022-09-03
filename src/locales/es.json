@@ -1,0 +1,49 @@
+{
+  "message": "hello i18n !!",
+  "presente": "presente",
+  "about": "sobre",
+  "me": "mi",
+  "my": "mis",
+  "portfolio": "portafolio",
+  "titulo": "Frontend Web Developer",
+  "contact": "Contactos",
+  "descripcion": "Parte del equipo de Frontend usando HTML, CSS, ReactJS. Encargado de unir al equipo 381 y servir de mediador entre ellos para poder llegar a acuerdos sobre el proyecto e impulsarlo para su realización y producción.",
+  "location": "Localizacion",
+  "email": "Correo",
+  "education": "Educacion",
+  "mobileN": "Numero Movil",
+  "languages": "Idiomas",
+  "languagesDesc": "Español nativo, Ingles medio",
+  "yourName": "TU NOMBRE",
+  "yourEmail": "TU CORREO",
+  "enterSubject": "ESCRIBE TEMA",
+  "messageHere": "Mensaje aqui...",
+  "h1": {
+    "saludo": "Hola",
+    "nombre": "Soy Jose Briceno",
+    "carrera": "Un Frontend Web Developer"
+  },
+  "h4": {
+    "skills": "Mis habilidades",
+    "timeline": "Mi linea de tiempo",
+    "information": "Informacion sobre mi",
+    "blogsDescription1": "Como crear tu propia website",
+    "blogsDescription2": " No tengo una... pero hey, se ve bien aqui",
+    "contactDesc": "Contactame aqui"
+  },
+  "p": {
+    "presentacion": "Soy un Web Developer, amo crear paginas hermosas y funcionales",
+    "aboutMe1": "Licenciado en Informática en Proceso, Competente en Desarrollo Frontend usando Vanilla JavaScript, VueJS y React. Abierto a Trabajar usando mis habilidades y abierto a aprender cualquier otra tecnología.",
+    "aboutMe2": "Soy una persona autodidacta, responsable, de mente abierta, me divierto resolviendo problemas y quiero ser lo mejor de mí mismo. Quiero ser mejor cada día, como persona y como profesional.",
+    "aboutMe3": "Actualmente estoy trabajando en IDforIdeas, hay jóvenes de varias ramas como backend, diseñadores, etc. Trabajamos en un proyecto en el que nos propusimos realizar una idea, como una pizzería y como grupo usamos nuestras habilidades para diseñar, desarrollarlo y probarlo para entregar un producto de la vida real. Estamos usando Vanilla CSS, ReactJS como front. Soy el Product Owner/Scrum Master de turno.",
+    "aboutProject1": "Proyectos",
+    "aboutProject2": "Completados",
+    "aboutChallenges": "Retos",
+    "aboutMotivated": "Motivado",
+    "aboutAttitude": "Actitud",
+    "portfolioDescription": "Aquí hay algunos de mis trabajos que he hecho en varios lenguajes de programación."
+  },
+  "span": {
+    "cv": "Descargar CV"
+  }
+}

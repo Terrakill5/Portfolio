@@ -1,18 +1,18 @@
 <template>
   <section class="sec2 about">
-    <titulo :front-title1="'About'" :front-title2="'Me'" :back-title="'My Stats'"></titulo>
+    <titulo :front-title1="$t('about')" :front-title2="$t('me')" :back-title="'My Stats'"></titulo>
     <!-- About container -->
     <div class="grid grid-cols-1 xl:grid-cols-2 pt-14 pb-20">
       <!-- about-container -->
       <div class="pr-0 md:pr-20">
         <!-- left-about -->
-        <h4 class="text-3xl uppercase font-bold" :class="{'text-gris4':light.isLight}">Information About me</h4>
+        <h4 class="text-3xl uppercase font-bold" :class="{'text-gris4':light.isLight}">{{$t('h4.information')}}</h4>
         <p class="leading-8 pl-0 py-4 md:p-4" :class="{'text-gris1': !light.isLight, 'text-gris4':light.isLight}">
-          Bachellor in Computer Science in Proccess, Proficient in Frontend Developement using Vanilla JavaScript, VueJS and React. Open to Work using my skills and open to learn any other technology. <br>
+          {{$t('p.aboutMe1')}}<br>
 
-I'm a Self-taught person, responsable, open minded, i get fun solving problems and i want to be the best of myself. i want to be better every day, as a person and as a professional. <br>
+          {{$t('p.aboutMe2')}}<br>
 
-I am currently working at IDforIdeas, there are juniors from various branches such as backend, designers, etc. We work on a project where we set out to realize an idea, like a pizza shop and as a group we use our skills to design, develop and test it to deliver a real life product. We're using Vanilla CSS, ReactJS as front. I'm the shift Product Owner/Scrum Master. 
+          {{$t('p.aboutMe3')}}
         </p>
         <boton></boton>
         <!-- CV Download -->
@@ -30,8 +30,8 @@ I am currently working at IDforIdeas, there are juniors from various branches su
             <p
               class="pl-0 xl:pl-12 relative uppercase text-xl text-gris1 tracking-widest small-text"
             >
-              Projects <br />
-              Completed
+            {{$t('p.aboutProject1')}} <br />
+            {{$t('p.aboutProject2')}}
             </p>
           </div>
         </div>
@@ -46,8 +46,8 @@ I am currently working at IDforIdeas, there are juniors from various branches su
             <p
               class="pl-0 xl:pl-12 relative uppercase text-xl text-gris1 tracking-widest small-text"
             >
-              Challenges <br />
-              Completed
+            {{$t('p.aboutChallenges')}} <br />
+            {{$t('p.aboutProject2')}}
             </p>
           </div>
         </div>
@@ -62,7 +62,7 @@ I am currently working at IDforIdeas, there are juniors from various branches su
             <p
               class="pl-0 xl:pl-12 relative uppercase text-xl text-gris1 tracking-widest small-text"
             >
-              Motivated
+            {{$t('p.aboutMotivated')}}
             </p>
           </div>
         </div>
@@ -77,7 +77,7 @@ I am currently working at IDforIdeas, there are juniors from various branches su
             <p
               class="pl-0 xl:pl-12 relative uppercase text-xl text-gris1 tracking-widest small-text"
             >
-              Attitude
+            {{$t('p.aboutAttitude')}}
             </p>
           </div>
         </div>
@@ -86,18 +86,18 @@ I am currently working at IDforIdeas, there are juniors from various branches su
     <!-- About stats -->
     <div class="pb-16">
       <!-- stat-title2 -->
-      <h4 class="font-bold uppercase text-2xl text-center py-14 px-0 relative stat-title" :class="{'text-gris4':light.isLight}">My Timeline</h4>
+      <h4 class="font-bold uppercase text-2xl text-center py-14 px-0 relative stat-title" :class="{'text-gris4':light.isLight}">{{$t('h4.timeline')}}</h4>
       <!-- Timeline/ Jobs -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pb-24 md:pb-12">
     <!-- timeline-item -->
-        <timeline :start="2022" :ended="'Present'" :title="'Frontend Web Developer'" :company="'ID for ideas'" :text="'Part of the Frontend team using HTML, CSS, ReactJS. In charge of uniting the 381 team and serving as a mediator between them to be able to reach agreements on the project and promote it for its realization and production.'"></timeline>
+        <timeline :start="2022" :ended="$t('presente')" :title="$t('titulo')" :company="'ID for ideas'" :text="$t('descripcion')"></timeline>
       </div>
       <!-- stat-title -->
       <h4
         class="font-bold uppercase text-2xl text-center py-14 px-0 relative stat-title"
         :class="{'text-gris4':light.isLight}"
       >
-        My Skills
+      {{$t('h4.skills')}}
       </h4>
       <!-- progress-bars -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">

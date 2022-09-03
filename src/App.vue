@@ -1,10 +1,7 @@
 <template>
   <div>
     <main>
-      <router-view v-slot="slotProps">
-        <transition name="route" mode="out-in">
-          <component :is="slotProps.Component"></component>
-        </transition>
+      <router-view>       
       </router-view>
     </main>
     <div
@@ -13,7 +10,7 @@
     >
       <!-- controls -->
       <router-link
-      to="/"
+      :to="`/${i18n.global.locale}/home`"
         @click="clickPestana(0)"
         class="p-4 cursor-pointer w-14  h-14 rounded-1/2 flex justify-center items-center my-4 mx-1 md:mx-0 md:my-3 shadow-especial dark:bg-secundario1"
         :class="{ 'bg-secundario': activo[0], 'bg-gris4': !activo[0], 'bg-secundario1': activo[0] && light.isLight }"
@@ -25,7 +22,7 @@
       </router-link>
       <!-- control 1 Home -->
       <router-link
-      to="/about"
+      :to="`/${i18n.global.locale}/about`"
         @click="clickPestana(1) "
         class="p-4 cursor-pointer w-14  h-14 rounded-1/2 flex justify-center items-center my-4 mx-1 md:mx-0 md:my-3 shadow-especial dark:bg-secundario1"
         :class="{ 'bg-secundario': activo[1], 'bg-gris4': !activo[1], 'bg-secundario1': activo[1] && light.isLight }"
@@ -34,7 +31,7 @@
       </router-link>
       <!-- control 2 -->
       <router-link
-      to="/portfolio"
+      :to="`/${i18n.global.locale}/portfolio`"
         @click="clickPestana(2)"
         class="p-4 cursor-pointer w-14  h-14 rounded-1/2 flex justify-center items-center my-4 mx-1 md:mx-0 md:my-3 shadow-especial dark:bg-secundario1"
         :class="{ 'bg-secundario': activo[2], 'bg-gris4': !activo[2], 'bg-secundario1': activo[2] && light.isLight}"
@@ -45,7 +42,7 @@
       </router-link>
       <!-- control 3 -->
       <router-link
-      to="/blogs"
+      :to="`/${i18n.global.locale}/blogs`"
         @click="clickPestana(3)"
         class="p-4 cursor-pointer w-14  h-14 rounded-1/2 flex justify-center items-center my-4 mx-1 md:mx-0 md:my-3 shadow-especial dark:bg-secundario1"
         :class="{ 'bg-secundario': activo[3], 'bg-gris4': !activo[3], 'bg-secundario1': activo[3] && light.isLight}"
@@ -56,7 +53,7 @@
       </router-link>
       <!-- control 4 -->
       <router-link
-      to="/contact"
+      :to="`/${i18n.global.locale}/contact`"
         @click="clickPestana(4)"
         class="p-4 cursor-pointer w-14  h-14 rounded-1/2 flex justify-center items-center my-4 mx-1 md:mx-0 md:my-3 shadow-especial dark:bg-secundario1"
         :class="{ 'bg-secundario': activo[4], 'bg-gris4': !activo[4], 'bg-secundario1': activo[4] && light.isLight}"
@@ -68,17 +65,38 @@
       <!-- control 5 -->
     </div>
     <!-- theme-btn -->
-    <div class="w-12 h-12 md:w-20 md:h-20 theme-btn rounded-1/2 bg-gris4 cursor-pointer fixed flex items-center justify-center shadow-especial4 transition-all duration-100 ease-in-out" @click="lightMode">
+    <div class="w-12 h-12 md:w-20 md:h-20 theme-btn rounded-1/2 bg-gris4 cursor-pointer fixed flex items-center justify-center shadow-especial4 transition-all duration-100 ease-in-out z-50" @click="lightMode">
       <i class="fa-solid fa-circle-half-stroke text-2xl text-gris2 pointer-events-none"></i>
+    </div>
+    <div class="w-12 h-12 md:w-20 md:h-20 theme-btn-i18n rounded-1/2 cursor-pointer fixed flex items-center justify-center shadow-especial4 transition-all duration-100 ease-in-out p-4 mx-0 md:mx-8 z-50" @click="changeLocal" :class="{ 'bg-gris4': i18n.global.locale !== 'en', 'bg-secundario1': i18n.global.locale === 'en' && light.isLight, 'bg-secundario': i18n.global.locale === 'en' }">
+      <i class="fa-solid fa-flag-usa  text-2xl pointer-events-none" :class="{ 'text-white': i18n.global.locale === 'en','text-gris2' : i18n.global.locale !== 'en' }"></i>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
+import router from './router';
+import i18n from './i18n'
 import { useLightStore } from "./store/light.js";
 let activo = ref([true, false, false, false, false, 0]);
 const light = useLightStore();
+
+const changeLocal = () => {
+  if (i18n.global.locale === 'en') {
+    i18n.global.locale = 'es';
+    router.push({
+      params: {lang: 'es'}
+    })
+  }
+  else {
+    i18n.global.locale = 'en';
+    router.push({
+      params: {lang: 'en'}
+    })
+  }
+  
+};
 
 const lightMode = () => {
   if (light.isLight) {
@@ -97,6 +115,15 @@ const clickPestana = (selector) => {
   activo.value[selector] = true;
   activo.value[5] = selector;
 };
+
+router.beforeEach((to, from, next) => {
+    let language = to.params.lang;
+    if (!language) {
+        language = 'en';
+    }
+    i18n.global.locale = language;
+    next();
+})
 </script>
 
 <style>
@@ -117,7 +144,23 @@ const clickPestana = (selector) => {
   right: 3%;
 }
 
+.theme-btn-i18n {
+  top: 5%;
+  right: 10%;
+}
+
+@media screen and (max-width: 768px) {
+  .theme-btn-i18n {
+  top: 15%;
+  right: 3%;
+}
+}
+
 .theme-btn:active {
+  transform: translateY(-5px);
+}
+
+.theme-btn-i18n:active {
   transform: translateY(-5px);
 }
 </style>

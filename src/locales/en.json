@@ -1,0 +1,49 @@
+{
+  "message": "hello i18n !!",
+  "presente": "present",
+  "about": "about",
+  "me": "me",
+  "my": "my",
+  "portfolio": "portfolio",
+  "contact": "Contact",
+  "titulo": "Frontend Web Developer",
+  "descripcion": "Part of the Frontend team using HTML, CSS, ReactJS. In charge of uniting the 381 team and serving as a mediator between them to be able to reach agreements on the project and promote it for its realization and production.",
+  "location": "Location",
+  "email": "Email",
+  "education": "Education",
+  "mobileN": "Mobile Number",
+  "languages": "Languages",
+  "languagesDesc": "Native Spanish, Mid English",
+  "yourName": "YOUR NAME",
+  "yourEmail": "YOUR EMAIL",
+  "enterSubject": "ENTER SUBJECT",
+  "messageHere": "Message Here...",
+  "h1": {
+    "saludo": "Hi",
+    "nombre": "I'm Jose Briceno",
+    "carrera": "A Frontend Web Developer"
+  },
+  "h4": {
+    "skills": "My Skills",
+    "timeline": "My Timeline",
+    "information": "Information About me",
+    "blogsDescription1": "How to Create Your Own Website",
+    "blogsDescription2": " I don't have one... but hey, looks cool here",
+    "contactDesc": "Contact me here"
+  },
+  "p": {
+    "presentacion": "I'm a Web Developer, I love to create beautiful and functional websites",
+    "aboutMe1": "Bachellor in Computer Science in Proccess, Proficient in Frontend Developement using Vanilla JavaScript, VueJS and React. Open to Work using my skills and open to learn any other technology. ",
+    "aboutMe2": "I'm a Self-taught person, responsable, open minded, i get fun solving problems and i want to be the best of myself. i want to be better every day, as a person and as a professional. ",
+    "aboutMe3": "I am currently working at IDforIdeas, there are juniors from various branches such as backend, designers, etc. We work on a project where we set out to realize an idea, like a pizza shop and as a group we use our skills to design, develop and test it to deliver a real life product. We're using Vanilla CSS, ReactJS as front. I'm the shift Product Owner/Scrum Master. ",
+    "aboutProject1": "Projects",
+    "aboutProject2": "Completed",
+    "aboutChallenges": "Challenges",
+    "aboutMotivated": "Motivated",
+    "aboutAttitude": "Attitude",
+    "portfolioDescription": "Here is some of my work that i've done in various programming languages"
+  },
+  "span": {
+    "cv": "Download CV"
+  }
+}

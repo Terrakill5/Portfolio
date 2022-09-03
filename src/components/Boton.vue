@@ -6,7 +6,7 @@
       class="rounded-30 font-semibold relative border border-solid flex self-start items-center overflow-hidden"
       :class="{'antesLight': light.isLight,'border-secundario1': light.isLight, 'antes': !light.isLight, 'border-secundario': !light.isLight,}"
     >
-      <span class="py-0 px-8" :class="{'text-gris4': light.isLight}">Download CV</span>
+      <span class="py-0 px-8" :class="{'text-gris4': light.isLight}">{{$t('span.cv')}}</span>
       <span
         class="flex items-center justify-center rounded-1/2 p-4"
         :class="{'bg-secundario': !light.isLight, 'bg-secundario1': light.isLight}"
