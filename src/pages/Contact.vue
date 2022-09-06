@@ -49,7 +49,7 @@
             <textarea class="rounded-30 py-3 px-4 outline-none border-none bg-gris5 w-full text-white resize-none" id="" cols="15" rows="8" :placeholder="$t('messageHere')" name="message" />
           </div>
           <!-- submit-btn -->
-          <div class="flex justify-between  ">
+          <div class="flex justify-between responsive ">
             <boton></boton>
             <button :class="{'bg-secundario': !light.isLight, 'bg-secundario1': light.isLight}" class="rounded-3xl py-3 px-4 font-semibold" id="my-form-button" @click="presionar">{{$t('button')}}</button>
           </div>
@@ -110,5 +110,11 @@ const presionar = () => {
 .right-contact {
   flex: 3;
 } 
+
+@media screen and (max-width: 905px) {
+  .responsive {
+  flex-direction: column-reverse;
+}
+}
 
 </style>
