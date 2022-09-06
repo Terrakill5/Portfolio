@@ -35,23 +35,25 @@
         </div>
       </div>
       <!-- right-contact -->
-      <div class="right-contact ml-0 mt-10 lg:mt-0 lg:ml-12">
-        <form action="" class="contact-form">
+      <div class="right-contact ml-0 mt-10 mb-16 lg:mt-0 lg:ml-12">
+        <form id="my-form" action="https://formspree.io/f/xwkzvonp" method="POST" class="contact-form">
           <!-- input-control -->
           <div class="input-control m-6 flex flex-col lg:flex-row">
-            <input class="rounded-30 py-3 px-4 outline-none border-none bg-gris5 w-full text-white resize-none" type="text" required :placeholder="$t('yourName')">
-            <input class="ml-0 mt-6 lg:mt-0 lg:ml-6 rounded-30 py-3 px-4 outline-none border-none bg-gris5 w-full text-white resize-none" type="email" required :placeholder="$t('yourEmail')" />
+            <input class="rounded-30 py-3 px-4 outline-none border-none bg-gris5 w-full text-white resize-none" type="text" required :placeholder="$t('yourName')" name="name">
+            <input class="ml-0 mt-6 lg:mt-0 lg:ml-6 rounded-30 py-3 px-4 outline-none border-none bg-gris5 w-full text-white resize-none" type="email" required :placeholder="$t('yourEmail')" name="email" />
           </div>
           <div class="input-control m-6">
-            <input class="rounded-30 py-3 px-4 outline-none border-none bg-gris5 w-full text-white resize-none" type="text" required :placeholder="$t('enterSubject')" />
+            <input class="rounded-30 py-3 px-4 outline-none border-none bg-gris5 w-full text-white resize-none" type="text" required :placeholder="$t('enterSubject')" name="subject" />
           </div>
           <div class="input-control m-6">
-            <textarea class="rounded-30 py-3 px-4 outline-none border-none bg-gris5 w-full text-white resize-none" name="" id="" cols="15" rows="8" :placeholder="$t('messageHere')" />
+            <textarea class="rounded-30 py-3 px-4 outline-none border-none bg-gris5 w-full text-white resize-none" id="" cols="15" rows="8" :placeholder="$t('messageHere')" name="message" />
           </div>
           <!-- submit-btn -->
-          <div class="flex justify-start">
+          <div class="flex justify-between  ">
             <boton></boton>
+            <button :class="{'bg-secundario': !light.isLight, 'bg-secundario1': light.isLight}" class="rounded-3xl py-3 px-4 font-semibold" id="my-form-button" @click="presionar">{{$t('button')}}</button>
           </div>
+          <p id="my-form-status"></p>
         </form>
       </div>
     </div>
@@ -65,6 +67,39 @@
   import ContactItem from "../components/ContactItem.vue";
   import { useLightStore } from "../store/light";
 const light = useLightStore();
+
+const presionar = () => {
+  let form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      let status = document.getElementById("my-form-status");
+      let data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Thanks for your feedback!";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+          })
+        }
+      })/* .catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      }) */;
+    }
+    form.addEventListener("submit", handleSubmit)
+}
 </script>
 
 <style scoped>
