@@ -1,8 +1,8 @@
 <!-- eslint-disable vue/comment-directive -->
 <template>
-  <div class="flex self-start">
+  <div class="flex">
     <a
-      href="https://drive.google.com/file/d/1KCxjfhAlYOJEIVFcBqA_6Xf62avbQK4T/view?usp=sharing"
+      href="https://drive.google.com/file/d/1o3UjTFg51iIFsKJX-MejtALL9NCpQhkm/view?usp=sharing"
       class="rounded-30 font-semibold relative border border-solid flex self-start items-center overflow-hidden"
       :class="{'antesLight': light.isLight,'border-secundario1': light.isLight, 'antes': !light.isLight, 'border-secundario': !light.isLight,}"
     >

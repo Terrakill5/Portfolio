@@ -51,7 +51,7 @@
           <!-- submit-btn -->
           <div class="flex justify-between responsive ">
             <boton></boton>
-            <button :class="{'bg-secundario': !light.isLight, 'bg-secundario1': light.isLight}" class="rounded-3xl py-3 px-4 font-semibold" id="my-form-button" @click="presionar">{{$t('button')}}</button>
+            <button :class="{'bg-secundario': !light.isLight, 'bg-secundario1': light.isLight}" class="rounded-3xl py-3 px-4 font-semibold mb-4" id="my-form-button" @click="presionar">{{$t('button')}}</button>
           </div>
           <p id="my-form-status"></p>
         </form>
@@ -114,6 +114,12 @@ const presionar = () => {
 @media screen and (max-width: 905px) {
   .responsive {
   flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  padding: 0 5rem;
 }
 }
 
