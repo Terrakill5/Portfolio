@@ -8,9 +8,9 @@
     <!-- portfolios -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-24 md:mt-12">
       <!-- portfolio-item -->
-      <port-item :imagen="'https://i.imgur.com/fejjLsZ.jpg'" :link-g-h="'https://github.com/Terrakill5/prueba_frontend'" :link-b-h="'pizzastorejose.netlify.app'"></port-item>
+      <port-item :imagen="'https://i.imgur.com/fejjLsZ.jpg'" :link-g-h="'https://github.com/Terrakill5/prueba_frontend'" :link-b-h="'https://pizzastorejose.netlify.app'"></port-item>
       <port-item :imagen="'https://imgur.com/1cSvVTJ.jpg'" :link-g-h="'https://github.com/Terrakill5/practica4_React'" :link-b-h="'https://listadetareasreactjose.netlify.app/'"></port-item>
-      <port-item :imagen="'https://i.imgur.com/NAcfqO5.png'" :link-g-h="'https://github.com/Terrakill5/practica3_react'" :link-b-h="'calculadorareactjose.netlify.app'"></port-item>
+      <port-item :imagen="'https://i.imgur.com/NAcfqO5.png'" :link-g-h="'https://github.com/Terrakill5/practica3_react'" :link-b-h="'https://calculadorareactjose.netlify.app'"></port-item>
     </div>
   </section>
 </template>

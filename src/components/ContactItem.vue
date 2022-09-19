@@ -8,7 +8,7 @@
     </div>
     
     <p class="my-2 mx-0 p-0">
-      <span :class="{'text-gris4': light.isLight}"> : {{contactProps.description}}</span>
+      <span :class="{'text-gris4': light.isLight}"> :{{contactProps.description}}</span>
     </p>
   </div>
 </template>
@@ -42,9 +42,5 @@ const contactProps = defineProps({
 <style scoped>
 .icon {
   grid-template-columns: 40px 1fr;
-}
-
-@media screen and (max-width: 472px) {
-  
 }
 </style>
