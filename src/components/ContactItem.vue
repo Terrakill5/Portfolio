@@ -1,6 +1,6 @@
 <template>
 <!-- contact-item -->
-  <div class="flex items-center justify-center flex-col">
+  <div class="flex items-start justify-center flex-col">
     <!-- icon -->
     <div class="icon grid">
       <i  class="fa-solid flex items-center text-xl" :class="{'fa-location-dot': location, 'fa-envelope': envelope, 'fa-user-graduate': graduate, 'fa-globe': globe, 'fa-mobile': mobile, 'text-gris4':light.isLight}"></i>
@@ -8,7 +8,7 @@
     </div>
     
     <p class="my-2 mx-0 p-0">
-      <span :class="{'text-gris4': light.isLight}">  : {{contactProps.description}}</span>
+      <span :class="{'text-gris4': light.isLight}"> : {{contactProps.description}}</span>
     </p>
   </div>
 </template>
