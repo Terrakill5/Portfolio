@@ -5,7 +5,7 @@
         </div>
         <!-- hover-item -->
         <div :class="{'bg-secundario': !light.isLight, 'bg-secundario1':light.isLight}" class="w-full h-full absolute left-0 top-0 rounded-2xl flex justify-center items-center flex-col opacity-0 scale-0 transition-all duration-500 ease-in-out hover:opacity-100 hover:scale-100">
-          <h3 class="text-2xl text-white mb-6">Project Source</h3>
+          <h3 class="text-2xl text-white mb-6">{{ portfolioProps.titulo }}</h3>
           <!-- icons -->
           <div class="flex justify-center items-center">
             <a :href=portfolioProps.linkGH target="_blank" class="bg-primario rounded-1/2 w-12 h-12 flex justify-center items-center my-0 mx-4 cursor-pointer transition-all duration-500 ease-in-out text-2xl hover:bg-white hover:text-primario">
@@ -14,9 +14,9 @@
             <a :href=portfolioProps.linkBH target="_blank" class="bg-primario rounded-1/2 w-12 h-12 flex justify-center items-center my-0 mx-4 cursor-pointer transition-all duration-500 ease-in-out text-2xl hover:bg-white hover:text-primario">
               <i class="fa-brands fa-behance"></i>
             </a>
-            <a :href=portfolioProps.linkY target="_blank" class="bg-primario rounded-1/2 w-12 h-12 flex justify-center items-center my-0 mx-4 cursor-pointer transition-all duration-500 ease-in-out text-2xl hover:bg-white hover:text-primario">
+            <button :href=portfolioProps.linkY target="_blank" class="bg-primario rounded-1/2 w-12 h-12 flex justify-center items-center my-0 mx-4 cursor-pointer transition-all duration-500 ease-in-out text-2xl hover:bg-white hover:text-primario">
               <i class="fa-brands fa-youtube"></i>
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -29,6 +29,10 @@ const light = useLightStore();
 
 const portfolioProps = defineProps({
   imagen: {
+    type: String,
+    required: true,
+  },
+  titulo: {
     type: String,
     required: true,
   },
