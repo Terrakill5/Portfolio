@@ -2,7 +2,7 @@
 <template>
   <div class="flex">
     <a
-      href="https://drive.google.com/file/d/1o3UjTFg51iIFsKJX-MejtALL9NCpQhkm/view?usp=sharing"
+      href="https://drive.google.com/file/d/1Kks43BqkvqYlPuwycmDwR6zmWHo1YPFd/view?usp=sharing"
       target="_blank"
       class="rounded-30 font-semibold relative border border-solid flex self-start items-center overflow-hidden"
       :class="{'antesLight': light.isLight,'border-secundario1': light.isLight, 'antes': !light.isLight, 'border-secundario': !light.isLight,}"
